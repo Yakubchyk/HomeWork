@@ -1,3 +1,6 @@
+import java.util.Scanner;
+
+
 /*
 Задача 1:
 Написать приложение, которое будет вычислять и выводить значение по формуле:
@@ -115,5 +118,117 @@ class HomeWork_6 {
 
         System.out.println("a: " + a);
         System.out.println("b: " + b);
+    }
+}
+
+// А сейчас домашка второго дня:
+/////////////////////////////////
+/*
+Задача 1:
+Напишите программу, которая будет принимать на вход число из консоли и на выход
+будет выводить сообщение четное число или нет. Для определения четности числа
+используйте операцию получения остатка от деления (операция выглядит так: '% 2').
+ */
+class HomeWork01 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введитн число:  ");
+        int a = scanner.nextInt();
+        if (a % 2 == 0) {
+            System.out.println(" Четное ");
+        } else {
+            System.out.println(" Нечетное ");
+        }
+    }
+}
+
+/*
+Задача 2:
+Для введенного числа t (температура на улице) вывести: Если t>–5, то вывести «Warm».
+Если –5>= t > –20, то вывести «Normal». Если –20>= t, то вывести «Cold».
+ */
+class TempClass {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print(" Введите температуру: ");
+
+//        switch (scanner.nextInt()){
+//            case -1, -2, -3, -4, -5 -> System.out.println("Warm");
+//            case -6, -7, -8, -9, -10, -11, -12, -13, -14, -15, -16, - -> System.out.println("Norm");
+//
+//        }
+        int a = scanner.nextInt();
+        if (a >= -5) {
+            System.out.println("Warm");
+        }
+        if (a < -5 || a > -20) {
+            System.out.println("Norm");
+        }
+        if (a < -20) {
+            System.out.println("Kalt");
+        }
+    }
+}
+
+/*
+Задача 3:
+Составьте программу, выводящую на экран квадраты чисел от 10 до 20 включительно.
+ */
+class SquareClass {
+    public static void main(String[] args) {
+        // Scanner scanner = new Scanner(System.in);
+        for (int i = 10; i <= 20; i++) {
+            int res = i * i;
+            System.out.println("Квадратный корень числа " + i + " равно " + res);
+        }
+    }
+}
+
+/*
+Задача 4:
+Необходимо, чтоб программа выводила на экран вот такую последовательность:
+7 14 21 28 35 42 49 56 63 70 77 84 91 98. В решении используйте цикл while.
+ */
+class TablizaClass {
+    public static void main(String[] args) {
+        int i = 7;
+
+        while (i <= 100) {
+            System.out.print(i + " ");
+            i = i + 7;
+
+//        for (int i = 7; i <= 100; i = i + 7){
+//            System.out.println(i);
+        }
+    }
+}
+
+/*
+Напишите программу, где пользователь вводит любое целое положительное число. А
+программа суммирует все числа от 1 до введенного пользователем числа. Для ввода
+числа воспользуйтесь классом Scanner. Сделать проверку, чтобы пользователь не мог
+ввести некорректные данные.
+ */
+class SummClass {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Введите целое положительное число:  ");
+        int UserNumber = 0;
+        int sum = 0;
+        while (true) {
+            if (scanner.hasNextInt()) {
+                UserNumber = scanner.nextInt();
+
+                break;
+            } else {
+                System.out.print("Неверно введено число. Попробуйте еще раз: ");
+                scanner.next();
+            }
+        }
+        for (int i = 1; i <= UserNumber; i++) {
+            sum = sum + i;
+            System.out.println(sum);
+        }
+
     }
 }
