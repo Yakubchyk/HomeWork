@@ -71,9 +71,11 @@ class HomeWork_3 {
  */
 class HomeWork_4 {
     public static void main(String[] args) {
-        double n = 5.4;
-        int res = (int) Math.round(n);
-        System.out.println("Рузультат округления числа 5,4: " + res);
+        double a = 5.7;
+        double b = 5.4;
+        System.out.println("Число " + a + ", округление: " + (int) (a + 0.5));
+        System.out.println("Число " + b + ", округление: " + (int) (b + 0.5));
+
 
     }
 }
