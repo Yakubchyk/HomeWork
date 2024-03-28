@@ -27,3 +27,17 @@ public class ProstoeChisloProverka {
 
     }
 }
+
+
+/*
+Serhey Pavirayeu, [25.03.24 17:06]
+public static boolean isSimple(Integer number) {
+        if(number < 2) return false;
+        for(int i = 2; i < number / 2; i++) {
+            if(number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+ */

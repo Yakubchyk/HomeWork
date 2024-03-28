@@ -56,3 +56,54 @@ class SortArrClass {
         }
     }
 }
+
+class MassSortZwei {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        int[] ord = new int[arr.length];
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("Введите элемент массива: ");
+            arr[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < arr.length; i++) {
+            int mas = arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < mas) {
+                    mas = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = mas;
+                }
+            }
+            ord[i] = mas;
+            System.out.print(ord[i] + " ");
+        }
+    }
+}
+
+class MassSortDrei {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        int[] ord = new int[arr.length];
+        Scanner scanner = new Scanner(System.in);
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print("Введите элемент массива: ");
+            arr[i] = scanner.nextInt();
+        }
+        for (int i = 0; i < arr.length; i++) {
+            int mas = arr[i];
+
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[j] < mas) {
+                    mas = arr[j];
+                    arr[j] = arr[i];
+                    arr[i] = mas;
+                }
+            }
+            ord[i] = mas;
+            System.out.print(ord[i] + " ");
+        }
+    }
+}
